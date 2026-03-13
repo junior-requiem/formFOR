@@ -1,0 +1,177 @@
+:root {
+  --brand-500: #2099f1;
+  --brand-700: #1169be;
+  --surface: #ffffff;
+  --surface-soft: #f6f8fb;
+  --text-900: #1f2a37;
+  --text-600: #5b6675;
+  --border: #dbe3ec;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 300;
+  color: var(--text-900);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  line-height: 1.4;
+}
+
+h1,
+h2,
+.eyebrow,
+.primary-btn {
+  font-family: "Geomanist", "Avenir Next", "SF Pro Display", -apple-system, sans-serif;
+  font-weight: 500;
+}
+
+.page-shell {
+  width: min(980px, calc(100% - 2rem));
+  margin: 3rem auto;
+}
+
+.form-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 12px 36px rgba(17, 105, 190, 0.09);
+}
+
+.eyebrow {
+  color: var(--brand-700);
+  letter-spacing: 0.03em;
+  margin: 0 0 0.35rem;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  margin: 0;
+}
+
+.subtext {
+  color: var(--text-600);
+  margin-top: 0.75rem;
+}
+
+.reference-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+}
+
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.pill {
+  border: none;
+  background: #edf2f7;
+  color: #2c3744;
+  font: inherit;
+  padding: 0.48rem 0.95rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  background: var(--brand-500);
+  color: white;
+}
+
+.pill.active {
+  background: var(--brand-700);
+  color: white;
+}
+
+.inline-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+label {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--text-900);
+}
+
+.text-label,
+.section-helper {
+  color: var(--text-600);
+  margin: 0 0 0.55rem;
+}
+
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  padding: 0.75rem;
+  font: inherit;
+  color: var(--text-900);
+}
+
+textarea:focus,
+select:focus {
+  outline: 2px solid color-mix(in srgb, var(--brand-500), white 55%);
+  border-color: var(--brand-500);
+}
+
+.skill-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.25rem;
+  background: linear-gradient(135deg, var(--brand-500), var(--brand-700));
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    margin: 1rem auto 2rem;
+  }
+
+  .form-header,
+  .card {
+    padding: 1rem;
+  }
+}
