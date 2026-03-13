@@ -1,6 +1,7 @@
 :root {
   --brand-500: #2099f1;
   --brand-700: #1169be;
+  --brand-900: #0e3d70;
   --surface: #ffffff;
   --surface-soft: #f6f8fb;
   --text-900: #1f2a37;
@@ -8,6 +9,14 @@
   --border: #dbe3ec;
   --radius-lg: 18px;
   --radius-pill: 999px;
+}
+
+@font-face {
+  font-family: "Geomanist";
+  src: local("Geomanist Medium"), local("Geomanist-Medium"), local("Geomanist");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -74,8 +83,25 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  letter-spacing: 0.005em;
+  color: var(--brand-900);
   margin: 0 0 1rem;
+  padding: 0.2rem 0 0.7rem 0.9rem;
+  border-bottom: 1px solid #dde7f1;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  bottom: 0.7rem;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--brand-500), var(--brand-700));
 }
 
 .pill-grid {
